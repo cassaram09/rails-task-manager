@@ -10,6 +10,9 @@
   <p>Due: <%= task.due_date %></p>
   <p>Status: <%= task.status %></p>
   <p>Priority: <%= task.priority%></p>
+  <p>Tags: <% task.tags.each do |tag| %>
+    <%= tag.name %>, 
+    <% end %></p>
   <p><%= link_to "Edit Task", project_task_path(@project, task)%></p>
   <p><%= link_to "Delete Task", project_task_path(@project, task), method: :delete%></p>
 <% end %>

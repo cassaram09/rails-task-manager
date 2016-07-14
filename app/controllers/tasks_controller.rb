@@ -7,7 +7,6 @@ class TasksController < ApplicationController
 
     @tasks = @user.tasks
     @task = Task.new
-    #binding.pry
   end
 
   def new
@@ -15,7 +14,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    binding.pry
     @task = Task.create(task_params)
     redirect_to project_tasks_path
   end
@@ -28,6 +26,7 @@ class TasksController < ApplicationController
   end
 
   def update
+
     @task.update(task_params)
     redirect_to project_tasks_path
   end
@@ -55,6 +54,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :description, :project_id, :user_id, :due_date, :status, :priority)
+    params.require(:task).permit(:name, :description, :project_id, :user_id, :due_date, :status, :priority, :tag_names)
   end
 end

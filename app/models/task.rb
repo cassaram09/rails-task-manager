@@ -9,4 +9,17 @@ class Task < ActiveRecord::Base
   enum priority: [:low, :medium, :high, :urgent]
 
   scope :complete, -> { where(status: 'complete') }
+
+  def tag_names=(tags)
+    tag_array = tags.split(",").map{|tag| tag.strip}
+    tag_array.each do |tag|
+      new_tag = Tag.find_or_create_by(name: tag)
+      self.tags << new_tag
+    end
+  end
+
+  def tag_names
+    self.tags.each {|tag| tag.name}
+  end
+
 end

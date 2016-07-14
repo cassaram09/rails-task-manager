@@ -7,6 +7,13 @@ class User < ActiveRecord::Base
   has_many :responsibilities
   has_many :comments
   has_many :tasks
-  has_many :notes       
+  has_many :notes    
   enum role: [:user, :admin]
+
+  def tags
+    tags = self.tasks.collect do |task|
+      task.tags.collect {|tag| tag}
+    end.flatten
+  end
+
 end

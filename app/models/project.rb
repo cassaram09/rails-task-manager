@@ -4,4 +4,6 @@ class Project < ActiveRecord::Base
   has_many :tags, through: :tasks
   has_many :comments, through: :tasks
   enum status: [:active, :on_hold, :complete]
+
+   scope :complete, -> { where(status: 'complete') }
 end
