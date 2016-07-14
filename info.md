@@ -24,10 +24,10 @@ Models
   Project
   Responsibility
   Task
-  TaskTags
-  Tags
-  Notes
-  Comments
+  TaskTag
+  Tag
+  Note
+  Comment
 
   User
     has_many :projects

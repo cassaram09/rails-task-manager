@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :comments
+  resources :notes
+  resources :tags
+  resources :tasks
+  resources :responsibilities
+  resources :projects
   root to: 'home#index'
 
   devise_for :users, skip: [:sessions] 
