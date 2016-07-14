@@ -18,6 +18,8 @@ App Features
 
   Need to write tests!
 
+  nested attribute: tag when creating a task
+
 
 Models
   User
