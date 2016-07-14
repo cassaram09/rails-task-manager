@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :notes
-  resources :tags
-  resources :tasks
-  resources :responsibilities
-  resources :projects
+
   root to: 'home#index'
 
   devise_for :users, skip: [:sessions] 
@@ -18,6 +13,19 @@ Rails.application.routes.draw do
     get "/signup" => "devise/registrations#new"
     get "/edit-profile" => "devise/registrations#edit"
   end
+
+  resources :comments
+  
+  resources :notes
+
+  resources :tags
+
+  resources :responsibilities
+
+  resources :projects do 
+    resources :tasks
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

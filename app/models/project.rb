@@ -3,5 +3,5 @@ class Project < ActiveRecord::Base
   has_many :tasks
   has_many :tags, through: :tasks
   has_many :comments, through: :tasks
-  enum status: = [:active, :on_hold, :complete]
+  enum status: [:active, :on_hold, :complete]
 end

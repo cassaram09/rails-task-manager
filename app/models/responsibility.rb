@@ -3,5 +3,5 @@ class Responsibility < ActiveRecord::Base
   has_many :comments
   has_many :tags
 
-  enum status: = [:active, :complete]
+  enum status: [:active, :complete]
 end

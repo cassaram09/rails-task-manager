@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160714142305) do
 
   create_table "tasks", force: :cascade do |t|
     t.integer  "project_id"
+    t.integer  "user_id"
     t.string   "name"
     t.string   "description"
     t.date     "due_date"
