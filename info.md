@@ -1,11 +1,22 @@
 App Features
-  - user login / authenication with devise
-  - user authorization with Pundit
+  - User can sign up and log in and log out
+  - User can CRUD their own projects
+  - User can CRUD their own responsibilities
+  - User can CRUD their own tasks
+  - User can CRUD their own comments
+  - User can CRUD their own notes
+  - User can CRUD their own tags, and add tags to tasks
+  - User cannot CRUD other users projects/responsibilities etc
+  - Admin can do everything
 
 
+  Later feature: add Users to projects with view / edit capabilities
+
+  Devise for authentication
+  Pundit for authorization
 
 
-
+  Need to write tests!
 
 
 Models
