@@ -7,4 +7,6 @@ class Task < ActiveRecord::Base
 
   enum status: [:active, :on_hold, :complete]
   enum priority: [:low, :medium, :high, :urgent]
+
+  scope :complete, -> { where(status: 'complete') }
 end

@@ -22,8 +22,11 @@ Rails.application.routes.draw do
 
   resources :responsibilities
 
-  resources :projects do 
-    resources :tasks
+  resources :projects do
+    get :complete, on: :collection
+    resources :tasks do 
+      get :complete, on: :collection
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
