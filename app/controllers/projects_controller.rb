@@ -19,7 +19,8 @@ class ProjectsController < ApplicationController
   def show
   end
 
-  def edit
+  def edit 
+    redirect_to project_path(@project)
   end
 
   def update
