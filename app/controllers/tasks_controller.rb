@@ -27,7 +27,8 @@ class TasksController < ApplicationController
   end
 
   def update
-
+    binding.pry
+    @task.tags.clear
     @task.update(task_params)
     redirect_to project_tasks_path
   end

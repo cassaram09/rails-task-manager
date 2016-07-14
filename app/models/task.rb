@@ -19,7 +19,10 @@ class Task < ActiveRecord::Base
   end
 
   def tag_names
-    self.tags.each {|tag| tag.name}
+    tags = self.tags.collect {|tag| tag.name}
+    tags.join(", ")
   end
+
+
 
 end
