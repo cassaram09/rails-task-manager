@@ -1,6 +1,4 @@
-<h2>Active Projects</h2>
-
-<%= render partial: "form", locals: {project: @project} %>
+<h2>Complete Projects</h2>
 
 <% @projects.each do|project| %>
   <h3> <%= link_to project.name, project_path(project) %> </h3>
@@ -8,6 +6,4 @@
   <p> <%= project.due_date %> </p>
   <p> <%= project.status %> </p>
   <p> <%= link_to "Project Tasks", project_tasks_path(project)%> </p>
-
 <% end %>
-
