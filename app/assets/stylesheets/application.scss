@@ -14,3 +14,10 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.alert, .notice {
+  padding: 0px;
+  margin-bottom: 0px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}

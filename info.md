@@ -7,7 +7,7 @@ App Features
   - User can CRUD their own notes
   - User can CRUD their own tags, and add tags to tasks
   - User cannot CRUD other users projects/responsibilities etc
-  - Admin can do everything
+  - Admin can do everything- might need to rework this
 
 
   Later feature: add Users to projects with view / edit capabilities

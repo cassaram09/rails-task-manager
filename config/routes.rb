@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   resources :responsibilities
 
   resources :projects do
+    get :all_tasks, on: :collection
+    get :on_hold, on: :collection
     get :complete, on: :collection
     resources :tasks do 
       get :complete, on: :collection

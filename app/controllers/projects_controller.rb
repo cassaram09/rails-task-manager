@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_user, except: [:destroy]
   before_action :set_project, except: [:index, :new, :create]
-  layout "projects_layout"
+  layout "projects_layout", except: [:all_tasks]
 
   def index
     @projects = @user.active_projects
@@ -49,6 +49,10 @@ class ProjectsController < ApplicationController
 
   def complete
     @projects = @user.complete_projects
+  end
+
+  def all_tasks
+    @tasks = @user.all_tasks
   end
 
   private

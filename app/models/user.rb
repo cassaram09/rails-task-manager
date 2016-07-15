@@ -28,4 +28,9 @@ class User < ActiveRecord::Base
     self.projects.on_hold
   end
 
+  def all_tasks
+    self.projects.map do |project|
+      project.tasks
+    end.flatten
+  end
 end
