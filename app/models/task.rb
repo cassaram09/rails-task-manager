@@ -12,6 +12,8 @@ class Task < ActiveRecord::Base
   scope :on_hold, -> { where(status: 1) }
   scope :active, -> { where(status: 0)}
 
+  #custom writer and readers for Task for creating nested attributes
+
   def tag_names=(tags)
     tag_array = tags.split(",").map{|tag| tag.strip}
     tag_array.each do |tag|

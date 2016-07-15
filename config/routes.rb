@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+
+  get 'sessions/auth'
+
   root to: 'home#index'
 
   devise_for :users, skip: [:sessions] 
@@ -34,6 +38,9 @@ Rails.application.routes.draw do
   namespace :admin do 
     resources :dashboard, only: [:index]
   end
+
+  get '/auth/facebook/callback' => 'sessions#create'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

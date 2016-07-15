@@ -1,4 +1,6 @@
 class Admin::DashboardController < ApplicationController
+  # Controller for users with role: admin
+  
   before_action :set_user
   before_action :authenticate_user!
 

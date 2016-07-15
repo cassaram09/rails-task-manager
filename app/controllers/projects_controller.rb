@@ -52,7 +52,7 @@ class ProjectsController < ApplicationController
   end
 
   def all_tasks
-    @tasks = @user.all_tasks
+    @tasks = @user.all_user_tasks
   end
 
   private
