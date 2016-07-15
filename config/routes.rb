@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do 
-    resources :stats, only: [:index]
+    resources :dashboard, only: [:index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

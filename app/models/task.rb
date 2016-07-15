@@ -8,7 +8,9 @@ class Task < ActiveRecord::Base
   enum status: [:active, :on_hold, :complete]
   enum priority: [:low, :medium, :high, :urgent]
 
-  scope :complete, -> { where(status: 'complete') }
+  scope :complete, -> { where(status: 2) }
+  scope :on_hold, -> { where(status: 1) }
+  scope :active, -> { where(status: 0)}
 
   def tag_names=(tags)
     tag_array = tags.split(",").map{|tag| tag.strip}
