@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
   layout "projects_layout"
 
   def index
-    @projects = Project.user_active(@user.id)
+    @projects = @user.active_projects
     @project = Project.new
   end
 
@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
   end
 
   def complete
-    @projects = Project.user_complete(@user.id)
+    @projects = @user.complete_projects
   end
 
   private

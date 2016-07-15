@@ -20,6 +20,8 @@ App Features
 
   nested attribute: tag when creating a task
 
+  Admin section / namespace?
+
 
 Models
   User

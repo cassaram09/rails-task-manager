@@ -16,4 +16,16 @@ class User < ActiveRecord::Base
     end.flatten
   end
 
+  def active_projects
+    self.projects.active 
+  end
+
+  def complete_projects
+    self.projects.active 
+  end
+
+  def on_hold_projects
+    self.projects.on_hold
+  end
+
 end
